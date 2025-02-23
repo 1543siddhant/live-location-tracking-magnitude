@@ -1,0 +1,216 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #4e4376);
+    color: #e0e0e0;
+    padding: 100px 20px 20px 20px; /* Top padding for fixed navbar */
+    min-height: 100vh;
+  }
+  
+  /* Utility class to hide elements initially */
+  .hidden {
+    display: none;
+  }
+  
+  /* Center the H1 heading */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #ffffff;
+  }
+  
+  /* =========================
+     NAVBAR STYLING 
+     ========================= */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.97);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-logo {
+    color: #551A8B;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .mobile-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .nav-items {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+  
+  .nav-item {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #551A8B;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #d48b8b;
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: all 300ms ease;
+  }
+  
+  .btn:hover {
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: #caa2f0;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* =========================
+     MAP AND COORDINATES 
+     ========================= */
+  #map {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  #coordinates {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+    border-radius: 4px;
+    width: fit-content;
+  }
+  
+  /* =========================
+     BUTTONS AND LOGO CONTAINER 
+     ========================= */
+  .btn-container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #startTracking,
+  #getDirections {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #startTracking {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  #startTracking:hover:enabled {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  #getDirections {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #getDirections:hover:enabled {
+    background-color: #0069d9;
+    transform: scale(1.05);
+  }
+  
+  #startTracking:disabled,
+  #getDirections:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  /* Style for the logo image */
+  #logo {
+    /* max-width: 150px; */
+    height: 380px;
+    width: 500px;
+    display: block;
+  }
+  
+  /* =========================
+     RESPONSIVE ADJUSTMENTS
+     ========================= */
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 0 20px;
+    }
+    .nav-items {
+      gap: 16px;
+    }
+    .mobile-icon {
+      display: block;
+    }
+    #map {
+      width: 95%;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    #coordinates {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+    .btn-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .btn-container button,
+    .btn-container img {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  

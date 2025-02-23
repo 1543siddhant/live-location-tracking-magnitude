@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Location Tracking</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" style="color: #551A8B;">Tensor Titans</a>
+        <div class="mobile-icon" onclick="toggleMobileMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Models</a></li>  
+          <li><a href="https://example.com" target="_blank" class="nav-item">Report Incident</a></li>
+          <li><a href="https://example.com" target="_blank" class="nav-item">Track Location</a></li>
+          <li><a href="https://chatgpt.com" target="_blank" class="nav-item">ChatBot</a></li>
+        </ul>
+        <div class="button-container">
+          <a href="https://drive.google.com/file/d/1yHSKg7waygaev_fgneCotIVIrh3Y5H0b/view" target="_blank" class="btn" style="color: #ffffff;border:2px solid #d48b8b;background-color: #fb0000;">Emergency SOS</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <h1>Live Location Tracking</h1>
+  <div id="map" class="hidden"></div>
+  <div id="coordinates" class="hidden">Latitude: -- | Longitude: --</div>
+  
+  <div class="btn-container">
+    <button id="startTracking">Start Tracking</button>
+    <button id="getDirections" onclick="navigateToGoogleMaps()" disabled class="hidden">Get Directions</button>
+    <img id="logo" src="logo.png" alt="Logo">
+  </div>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvAhRDojug00qPdWV7eR7TDR16cxDo928"></script>
+  <script src="script.js"></script> <!-- Link to the JS file -->
+</body>
+</html>
